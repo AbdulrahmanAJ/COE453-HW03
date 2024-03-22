@@ -1,0 +1,72 @@
+swagger: "2.0"
+info:
+  title: mySampleAPI
+  description: API Walk through.
+  version: 1.0.0
+
+host: coe453-hw03-task02.apigateway.coe453-hw-415308.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      summary: Adds two numbers
+      operationId: add
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+      x-google-backend:
+        address: https://coe453-hw03-task02-345xpwyyvq-ww.a.run.app/add
+
+  /sub:
+    post:
+      summary: Subtracts two numbers
+      operationId: sub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+      x-google-backend:
+        address: https://coe453-hw03-task02-345xpwyyvq-ww.a.run.app/sub
+
+  /mul:
+    post:
+      summary: Multiplies two numbers
+      operationId: mul
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://coe453-hw03-task02-345xpwyyvq-ww.a.run.app/mul
+
+  /div:
+    post:
+      summary: Divides two numbers
+      operationId: div
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+      x-google-backend:
+        address: https://coe453-hw03-task02-345xpwyyvq-ww.a.run.app/div
